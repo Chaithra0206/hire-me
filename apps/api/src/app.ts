@@ -7,8 +7,12 @@ import { postingsRouter } from './routes/postings.js'
 import { studentRouter } from './routes/student.js'
 import { usersRouter } from './routes/users.js'
 import { clubMembersRouter } from './routes/club-members.js'
-import { studentDataRouter } from './routes/student-data.js'
+
 import { recruitersRouter } from './routes/recruiters.js'
+import { talentsRouter } from './routes/talents.js'
+
+import { studentDataRouter } from './routes/student-data.js'
+
 import { adminRouter } from './routes/admin.js'
 
 const app = new Hono<{
@@ -52,6 +56,9 @@ app.route('/api/clubs/members', clubMembersRouter)
 app.route('/api/student-data', studentDataRouter)
 // Recruiter onboarding and company profile management
 app.route('/api/recruiters', recruitersRouter)
+
+// Recruiter talent search
+app.route('/api/talents', talentsRouter)
 
 // Core-admin role administration
 app.route('/api/admin', adminRouter)
