@@ -7,6 +7,7 @@ import { postingsRouter } from './routes/postings.js'
 import { studentRouter } from './routes/student.js'
 import { usersRouter } from './routes/users.js'
 import { clubMembersRouter } from './routes/club-members.js'
+import { studentDataRouter } from './routes/student-data.js'
 import { recruitersRouter } from './routes/recruiters.js'
 import { adminRouter } from './routes/admin.js'
 
@@ -47,6 +48,8 @@ app.route('/api/users', usersRouter)
 // Club admin: membership management for appointed volunteers
 app.route('/api/clubs/members', clubMembersRouter)
 
+// Authenticated student-owned profile data
+app.route('/api/student-data', studentDataRouter)
 // Recruiter onboarding and company profile management
 app.route('/api/recruiters', recruitersRouter)
 
